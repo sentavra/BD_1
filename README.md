@@ -22,3 +22,32 @@ SELECT * FROM orders WHERE STATUS IN ('cancelled','new')
 SELECT id, sum FROM orders WHERE products_count > 3
 
 ![image](https://github.com/user-attachments/assets/6f867443-5fa1-4b29-9e3c-92f0c6cf4045)
+
+22.02.2025
+
+1 Файл
+
+1) Выберите из таблицы orders 3 самых дешевых заказа за всё время.
+Данные нужно отсортировать в порядке убывания цены.
+Отмененные заказы не учитывайте.
+
+SELECT * FROM orders WHERE status != 'cancelled' ORDER BY sum ASC LIMIT 3;
+
+![image](https://github.com/user-attachments/assets/c6313568-7ea4-4af1-9645-96a3c1e79a19)
+
+2) Выберите из таблицы orders 2 самых дорогих заказов за всё время.
+Данные нужно отсортировать в порядке убывания цены.
+Отмененные заказы не учитывайте.
+
+SELECT * FROM orders WHERE status != 'cancelled' ORDER BY sum DESC LIMIT 2;
+
+![image](https://github.com/user-attachments/assets/f28c10ac-1f8d-4b31-9da8-bb44dabb09ba)
+
+2 Файл
+
+INSERT INTO orders (price, products, status) VALUES (8000, 4, 'active');
+
+![image](https://github.com/user-attachments/assets/bcf0dda8-b8f9-45c8-93cc-a66c55c8585a)
+
+
+4) Добавьте в таблицу products новый товар — «VR-очки», стоимостью 70000 рублей в количестве (count) 2 штук.
