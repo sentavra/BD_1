@@ -50,29 +50,47 @@ INSERT INTO orders (price, products, status) VALUES (8000, 4, 'active');
 ![image](https://github.com/user-attachments/assets/bcf0dda8-b8f9-45c8-93cc-a66c55c8585a)
 
 
-4) Добавьте в таблицу products новый товар — «VR-очки», стоимостью 70000 рублей в количестве (count) 2 штук.
+4) Создайте таблицу products
+ 
+-----------------------------------------------------------------------------------------------------------------
+CREATE TABLE products (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(50),
+    price DECIMAL(10, 2),
+    count INT
+);
+--------------------------------------------------------------------------------------------------------------------
+ # Добавьте в таблицу products новый товар — «VR-очки», стоимостью 70000 рублей в количестве (count) 2 штук.
 
+INSERT INTO products (name, price, count) VALUES ('VR-очки', 70000, 2);
+----------------------------------------------------------------------------------------
+![image](https://github.com/user-attachments/assets/63a35edc-4d0c-44d2-af4c-af486c01a87a)
 
+5) В таблицу products внесли данные с ошибкой, вместо "PS5" в наименовании написали IMAC. Исправьте ошибку.
 
+UPDATE products 
+SET name = 'PS5' 
+WHERE name = 'IMAC';
 
+![image](https://github.com/user-attachments/assets/f70c7b6c-f2b8-418f-b86e-3fd2344adfd2)
 
 01.03.2025
 
 3 практическая 
 Создайте таблицу users с полем id типа INT и двумя текстовыми полями, которые будут хранить имя (first_name) и фамилию (last_name). Длина имени и фамилии не превышает 50 символов.
 Добавьте в таблицу трех пользователей: Дмитрия Иванова, Анатолия Белого и Дениса Давыдова.
-
+----------------------------------------------------------------------------------
 CREATE TABLE users (
-    id INT PRIMARY KEY AUTO_INCREMENT,
+    id INT,
     first_name VARCHAR(50),
     last_name VARCHAR(50)
 );
-
-INSERT INTO users (first_name, last_name) VALUES 
-('Дмитрий', 'Иванов'),
-('Анатолий', 'Белый'),
-('Денис', 'Давыдов');
-
+----------------------------------------------------------------------------------
+INSERT INTO users (id, first_name, last_name) VALUES 
+(1, 'Дмитрий', 'Иванов'),
+(2, 'Анатолий', 'Белый'),
+(3, 'Денис', 'Давыдов');
+------------------------------------------------------------------------------------------------
 ![image](https://github.com/user-attachments/assets/900661ab-20ca-41a5-b92c-1728bc4028e6)
 
 
