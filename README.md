@@ -72,7 +72,6 @@ INSERT INTO users (first_name, last_name) VALUES
 ('Дмитрий', 'Иванов'),
 ('Анатолий', 'Белый'),
 ('Денис', 'Давыдов');
-Создайте таблицу users с полем id типа INT и двумя текстовыми полями, которые будут хранить имя (first_name) и фамилию (last_name). Длина имени и фамилии не превышает 50 символов.
 
 ![image](https://github.com/user-attachments/assets/900661ab-20ca-41a5-b92c-1728bc4028e6)
 
