@@ -51,3 +51,29 @@ INSERT INTO orders (price, products, status) VALUES (8000, 4, 'active');
 
 
 4) Добавьте в таблицу products новый товар — «VR-очки», стоимостью 70000 рублей в количестве (count) 2 штук.
+
+
+
+
+
+01.03.2025
+
+3 практическая 
+Создайте таблицу users с полем id типа INT и двумя текстовыми полями, которые будут хранить имя (first_name) и фамилию (last_name). Длина имени и фамилии не превышает 50 символов.
+Добавьте в таблицу трех пользователей: Дмитрия Иванова, Анатолия Белого и Дениса Давыдова.
+
+CREATE TABLE users (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    first_name VARCHAR(50),
+    last_name VARCHAR(50)
+);
+
+INSERT INTO users (first_name, last_name) VALUES 
+('Дмитрий', 'Иванов'),
+('Анатолий', 'Белый'),
+('Денис', 'Давыдов');
+Создайте таблицу users с полем id типа INT и двумя текстовыми полями, которые будут хранить имя (first_name) и фамилию (last_name). Длина имени и фамилии не превышает 50 символов.
+
+![image](https://github.com/user-attachments/assets/900661ab-20ca-41a5-b92c-1728bc4028e6)
+
+
