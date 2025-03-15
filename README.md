@@ -70,7 +70,7 @@ INSERT INTO products (name, price, count) VALUES ('VR-очки', 70000, 2);
 
 UPDATE products SET NAME = 'PS5' WHERE NAME = 'IMAC'
 
-![image](https://github.com/user-attachments/assets/60b86fff-e531-4b76-ba2a-4bc367b6ad02)
+![image](https://github.com/user-attachments/assets/64f69c86-5261-487c-9d6c-96e3d350dec3)
 
 
 01.03.2025
