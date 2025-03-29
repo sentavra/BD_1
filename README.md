@@ -161,3 +161,31 @@ VALUES
 -
 ![image](https://github.com/user-attachments/assets/a357db16-8b5e-49b5-ab63-42de6a0e1148)
 -
+5 практическая
+-
+1) Выберите из таблицы orders 4 самых дорогих заказов за всё время.
+Данные нужно отсортировать в порядке убывания цены.
+Отмененные заказы не учитывайте.
+-
+![image](https://github.com/user-attachments/assets/94d360ae-2ae8-4474-9b00-e8a076412b41)
+-
+2) Выберите из таблицы products название и цены четырех самых дешевых товаров, которые есть на складе.
+-
+![image](https://github.com/user-attachments/assets/3d43880b-8601-444b-8908-6f038b91abf1)
+
+-
+3) Выберите из таблицы orders три последних заказа (по дате date) стоимостью от 3200 рублей и выше.
+Данные отсортируйте по дате в обратном порядке.
+-
+![image](https://github.com/user-attachments/assets/7117acc7-0c9e-43ab-9e1a-a71657ecfa6f)
+-
+4) Создайте данную таблицу:
+![image](https://github.com/user-attachments/assets/6f2e2c54-7633-47b9-80eb-9f0c0c5c5025)
+-
+![image](https://github.com/user-attachments/assets/c07d204d-54af-4827-9d0b-8ac25eb48c68)
+-
+5) Из этой таблицы сделать выборку на основе задания: Сайт выводит товары по 5 штук. Выберите из таблицы products товары, которые пользователи увидят на 3 странице каталога при сортировке в порядке возрастания цены (price).
+-
+![image](https://github.com/user-attachments/assets/cf6ced3f-93f8-4f5b-aea9-ffb6c361818e)
+-
+
