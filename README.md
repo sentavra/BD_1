@@ -1,26 +1,26 @@
 # BD_1
 1) Выберите из таблицы orders все заказы
-
+----
 SELECT * FROM orders
-
+-----
 ![image](https://github.com/user-attachments/assets/446e78e2-a4ae-40fd-b572-4fdca4359838)
 
 2) Выберите из таблицы orders все заказы кроме новых. У новых заказов status равен "new". Использовать in
-
+---
 SELECT * FROM orders WHERE STATUS IN ('cancelled','in_progress','delivery')
-
+---
 ![image](https://github.com/user-attachments/assets/a61aecf5-fde8-4542-9f69-bb8854f5abcf)
 
 3) Выберите из таблицы orders все новые и отмененные заказы. У отмененных заказов status равен "cancelled". У новых заказов status равен "new".
-
+----
 SELECT * FROM orders WHERE STATUS IN ('cancelled','new') 
-
+---
 ![image](https://github.com/user-attachments/assets/d1ffaaa6-5b7e-4706-a13e-972277a6f919)
 
 4) Выберите из таблицы orders все заказы содержащие более 3 товаров (products_count). Вывести нужно только номер (id) и сумму (sum) заказа.
-
+---
 SELECT id, sum FROM orders WHERE products_count > 3
-
+--
 ![image](https://github.com/user-attachments/assets/6f867443-5fa1-4b29-9e3c-92f0c6cf4045)
 
 22.02.2025
@@ -30,23 +30,23 @@ SELECT id, sum FROM orders WHERE products_count > 3
 1) Выберите из таблицы orders 3 самых дешевых заказа за всё время.
 Данные нужно отсортировать в порядке убывания цены.
 Отмененные заказы не учитывайте.
-
+----
 SELECT * FROM orders WHERE status != 'cancelled' ORDER BY sum ASC LIMIT 3;
-
+---
 ![image](https://github.com/user-attachments/assets/c6313568-7ea4-4af1-9645-96a3c1e79a19)
 
 2) Выберите из таблицы orders 2 самых дорогих заказов за всё время.
 Данные нужно отсортировать в порядке убывания цены.
 Отмененные заказы не учитывайте.
-
+----
 SELECT * FROM orders WHERE status != 'cancelled' ORDER BY sum DESC LIMIT 2;
-
+---
 ![image](https://github.com/user-attachments/assets/f28c10ac-1f8d-4b31-9da8-bb44dabb09ba)
 
 2 Файл
-
+---
 INSERT INTO orders (price, products, status) VALUES (8000, 4, 'active');
-
+---
 ![image](https://github.com/user-attachments/assets/bcf0dda8-b8f9-45c8-93cc-a66c55c8585a)
 
 
@@ -158,30 +158,30 @@ VALUES
 (1,'Антон','Кулик','С отличием окончил 39 лицей.'),
 (2,'Сергей','Давыдов',''),
 (3,'Дмитрий','Соколов','Профессиональный программист.')
--
+-----
 ![image](https://github.com/user-attachments/assets/a357db16-8b5e-49b5-ab63-42de6a0e1148)
--
+----
 5 практическая
--
+-----
 1) Выберите из таблицы orders 4 самых дорогих заказов за всё время.
 Данные нужно отсортировать в порядке убывания цены.
 Отмененные заказы не учитывайте.
--
+-------
 ![image](https://github.com/user-attachments/assets/94d360ae-2ae8-4474-9b00-e8a076412b41)
--
+------
 2) Выберите из таблицы products название и цены четырех самых дешевых товаров, которые есть на складе.
--
+-----
 ![image](https://github.com/user-attachments/assets/3d43880b-8601-444b-8908-6f038b91abf1)
-
--
+------
+----
 3) Выберите из таблицы orders три последних заказа (по дате date) стоимостью от 3200 рублей и выше.
 Данные отсортируйте по дате в обратном порядке.
--
+-----
 ![image](https://github.com/user-attachments/assets/7117acc7-0c9e-43ab-9e1a-a71657ecfa6f)
--
+-----
 4) Создайте данную таблицу:
 ![image](https://github.com/user-attachments/assets/6f2e2c54-7633-47b9-80eb-9f0c0c5c5025)
--
+---
 ![image](https://github.com/user-attachments/assets/c07d204d-54af-4827-9d0b-8ac25eb48c68)
 -
 5) Из этой таблицы сделать выборку на основе задания: Сайт выводит товары по 5 штук. Выберите из таблицы products товары, которые пользователи увидят на 3 странице каталога при сортировке в порядке возрастания цены (price).
@@ -193,7 +193,7 @@ VALUES
 1) Создайте таблицу orders для хранения списка заказов: id — идентификатор, целое положительное. user_id — идентификатор пользователя, который оформил заказ. Целое положительное, NULL запрещен. amount — стоимость заказа. Целое положительное число не более 1 млн. NULL запрещен, по умолчанию 0. created — дата и время создания заказа. NULL запрещен. state — статус заказа. Выбор из new, cancelled, in_progress, delivered, completed. Можно выбрать только один вариант. NULL запрещен. По умолчанию должен стоять new. Добавьте 3 записи так, чтобы получалась таблица ниже:
 
 ![image](https://github.com/user-attachments/assets/d0f99c55-860a-4ed7-914f-dfe124ddaf61)
-
+---
 Решение:
 CREATE TABLE orders (
     id INTEGER PRIMARY KEY AUTO_INCREMENT,
@@ -210,13 +210,13 @@ INSERT INTO orders (user_id, amount, created) VALUES (90, 249, '2018-02-01 19:13
 INSERT INTO orders (user_id, amount, created) VALUES (78, 2200, '2018-02-01 22:43:09');
 
 SELECT * FROM orders;
-
+---
 ![image](https://github.com/user-attachments/assets/a15788c7-942f-4f60-8ad2-dfddcd9500f5)
 
 2) Создайте таблицу users для хранения списка пользователей сайта: id — идентификатор, целое положительное. first_name — имя, строка до 20 символов. NULL запрещен. last_name — фамилия, строка до 20 символов. NULL запрещен. patronymic — отчество, строка до 20 символов. NULL запрещен, по умолчанию пустая строка. is_active — отметка об активности пользователя. Логическое поле, по умолчанию TRUE. is_superuser — отметка администратора. Логическое поле, по умолчанию FALSE. Добавьте 3 записи так, чтобы получалась таблица
 -
 ![image](https://github.com/user-attachments/assets/97ba039c-a33f-4125-8246-66f1872a7723)
-
+----
 Решение:
 CREATE TABLE users (
     id INTEGER PRIMARY KEY AUTO_INCREMENT,
@@ -229,22 +229,22 @@ CREATE TABLE users (
     CHECK (LENGTH(last_name) <= 20),
     CHECK (LENGTH(patronymic) <= 20)
 );
-
+--
 INSERT INTO users (first_name, last_name, patronymic, is_active, is_superuser)
 VALUES ('Дмитрий', 'Иванов', '', TRUE, FALSE);
-
+--
 INSERT INTO users (first_name, last_name, patronymic, is_active, is_superuser)
 VALUES ('Анатолий', 'Белый', 'Сергеевич', TRUE, TRUE);
-
+--
 INSERT INTO users (first_name, last_name, is_active, is_superuser)
 VALUES ('Андрей', 'Крючков', FALSE, FALSE);
-
+--
 SELECT * FROM users;
-
+--
 ![image](https://github.com/user-attachments/assets/a8cec7ab-813f-42e6-95f1-d74a4ab3fb5c)
 
 3) Создайте таблицу products для хранения товаров в интернет магазине: id — идентификатор, целое положительное. category_id — категория, целое положительное. Может принимать NULL. По умолчанию NULL. name — название, строка до 100 символов. NULL запрещен. count — количество, целое положительное до 255. NULL запрещен, по умолчанию 0. price — цена типа DECIMAL с 10 знаками, 2 из которых выделены для копеек. NULL запрещен, по умолчанию 0.00. Добавьте 3 записи так, чтобы получалась таблица
-
+-----
 Решение:
 CREATE TABLE products (
     id INTEGER PRIMARY KEY AUTO_INCREMENT,
@@ -267,5 +267,5 @@ INSERT INTO products (name, count, price)
 VALUES ('Сникерс', 12, 50.80);
 
 SELECT * FROM products;
-
+-----
 ![image](https://github.com/user-attachments/assets/a1429948-20dd-43fc-8a12-53f628292fe4)
